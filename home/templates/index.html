@@ -1,1 +1,55 @@
-!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>abc</title>
+    
+    <h1>Home Page</h1>
+
+     {% comment %} {{peoples}} {% endcomment %}
+
+     <table class="container">
+        
+        <tr>
+
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Can Vote</th>
+        
+       </tr>
+       
+       {% for people in peoples %}
+       <tr>
+      <td>{{forloop.counter}}</td>
+      <td>{{people.name}}</td>
+      <td>{{people.age}}</td>
+      <td>
+      {% if people.age >= 18%}
+       ✔️
+
+       {% else %}
+
+       ❌
+
+       {% endif %}
+      </td>
+
+       </tr>
+      {% endfor %}
+
+
+     </table>
+          
+        
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sunt velit reprehenderit est fuga, rerum esse sit, eligendi earum exercitationem a enim omnis repellat dolores ipsam ipsum eius quae eum.</p>
+
+
+    
+
+    </head>
+<body>
+    
+</body>
+</html>
